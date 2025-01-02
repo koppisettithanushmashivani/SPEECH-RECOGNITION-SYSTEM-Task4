@@ -65,7 +65,7 @@ with sr.Microphone() as source:
     except:
          print("Sorry, I did not get that")
 
-  SYSTEM DESIGN:
+  SYSTEM DESIGN:https://github.com/koppisettithanushmashivani/SPEECH-RECOGNITION-SYSTEM-Task4/commit/0304965cb3ff9033cd358d65fe953d5ec1a42ec4
 
   WORKING:
     The Speech Recognition System operates by capturing spoken commands through a microphone, which serves as the audio input. The embedded board processes these audio signals, converting them into a digital format suitable for analysis. A speech recognition module or algorithm on the board interprets the digital audio, identifying specific keywords or phrases that correspond to predefined commands. Once the commands are recognized, the system translates them into control signals that trigger actions on connected devices, such as turning a light on or off or adjusting a thermostat. This process occurs in real time, ensuring seamless and efficient device control. Additional features, like noise filtering and keyword detection, enhance the system's accuracy and reliability, making it a practical solution for hands-free command-based automation.
