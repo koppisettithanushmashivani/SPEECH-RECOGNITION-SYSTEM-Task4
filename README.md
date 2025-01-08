@@ -46,28 +46,44 @@ Set up communication channels (e.g., Bluetooth, Wi-Fi) between the embedded syst
 SOURCE CODE:
 import speech_recognition as sr
 
-# Initialize recognizer class (for recognizing the speech)
-r = sr.Recognizer()
+def speech_to_text():
+    # Initialize recognizer
+    recognizer = sr.Recognizer()
 
-# Reading Microphone as source
-# listening the speech and store in audio_text variable
-with sr.Microphone() as source:
-    print("Talk")
-    audio_text = r.listen(source)
-    print("Time over, thanks")
-    # recoginze_() method will throw a request
-    # error if the API is unreachable,
-    # hence using exception handling
-    
-    try:
-        # using google speech recognition
-        print("Text: "+r.recognize_google(audio_text))
-    except:
-         print("Sorry, I did not get that")
+    # Use the microphone as the audio source
+    with sr.Microphone() as source:
+        print("Adjusting for ambient noise... Please wait.")
+        recognizer.adjust_for_ambient_noise(source, duration=1)
+        print("Listening for your speech...")
 
-  SYSTEM DESIGN:https://github.com/koppisettithanushmashivani/SPEECH-RECOGNITION-SYSTEM-Task4/commit/0304965cb3ff9033cd358d65fe953d5ec1a42ec4
+        try:
+            # Capture audio input
+            audio = recognizer.listen(source, timeout=5, phrase_time_limit=10)
+            print("Processing audio...")
 
-  WORKING:
+            # Recognize speech using Google Web Speech API
+            text = recognizer.recognize_google(audio)
+            print("You said:", text)
+            return text
+
+        except sr.UnknownValueError:
+            print("Sorry, I could not understand the audio.")
+        except sr.RequestError as e:
+            print(f"Could not request results from the recognition service; {e}")
+        except Exception as e:
+            print(f"An error occurred: {e}")
+
+if __name__ == "__main__":
+    speech_to_text()
+
+
+SYSTEM DESIGN:https://github.com/koppisettithanushmashivani/SPEECH-RECOGNITION-SYSTEM-Task4/commit/0304965cb3ff9033cd358d65fe953d5ec1a42ec4
+
+CIRCUIT DIAGRAM:
+
+BLOCK DIAGRAM:
+
+ WORKING:
     The Speech Recognition System operates by capturing spoken commands through a microphone, which serves as the audio input. The embedded board processes these audio signals, converting them into a digital format suitable for analysis. A speech recognition module or algorithm on the board interprets the digital audio, identifying specific keywords or phrases that correspond to predefined commands. Once the commands are recognized, the system translates them into control signals that trigger actions on connected devices, such as turning a light on or off or adjusting a thermostat. This process occurs in real time, ensuring seamless and efficient device control. Additional features, like noise filtering and keyword detection, enhance the system's accuracy and reliability, making it a practical solution for hands-free command-based automation.
 
 CONCLUSION:
