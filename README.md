@@ -79,9 +79,9 @@ if __name__ == "__main__":
 
 SYSTEM DESIGN:https://github.com/koppisettithanushmashivani/SPEECH-RECOGNITION-SYSTEM-Task4/commit/0304965cb3ff9033cd358d65fe953d5ec1a42ec4
 
-CIRCUIT DIAGRAM:
+CIRCUIT DIAGRAM:https://github.com/koppisettithanushmashivani/SPEECH-RECOGNITION-SYSTEM-Task4/commit/8cf4c53657ffb0f89d77d97f3e266569525d5a00
 
-BLOCK DIAGRAM:
+BLOCK DIAGRAM:https://github.com/koppisettithanushmashivani/SPEECH-RECOGNITION-SYSTEM-Task4/commit/4f8ca64568639d2b0ce4d7970186cd4ad423bbae
 
  WORKING:
     The Speech Recognition System operates by capturing spoken commands through a microphone, which serves as the audio input. The embedded board processes these audio signals, converting them into a digital format suitable for analysis. A speech recognition module or algorithm on the board interprets the digital audio, identifying specific keywords or phrases that correspond to predefined commands. Once the commands are recognized, the system translates them into control signals that trigger actions on connected devices, such as turning a light on or off or adjusting a thermostat. This process occurs in real time, ensuring seamless and efficient device control. Additional features, like noise filtering and keyword detection, enhance the system's accuracy and reliability, making it a practical solution for hands-free command-based automation.
@@ -90,7 +90,7 @@ CONCLUSION:
   In conclusion, the Speech Recognition System provides a practical and efficient solution for command-based control of devices using voice input. By integrating a microphone, embedded board, and speech recognition technology, the system enables seamless and hands-free operation, enhancing user convenience and accessibility. Its ability to interpret spoken commands and execute corresponding actions in real time demonstrates its potential in smart automation, assistive technologies, and industrial applications. This system highlights the power of voice-controlled interfaces in creating intuitive and interactive environments, paving the way for future advancements in human-machine interaction.
 
 
-OUTPUT OF THE PROJECT:
+OUTPUT OF THE PROJECT:https://github.com/koppisettithanushmashivani/SPEECH-RECOGNITION-SYSTEM-Task4/commit/4b82d6fb3e2aa8ccb7ab7adb6735804ea2ec6d8c
 
 
 
